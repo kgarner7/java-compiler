@@ -1,0 +1,50 @@
+program[
+    integer test1 = 1 * ( 2 - 3/4 ), test2 = 1, test3 = test1 + test2
+    boolean b = true
+    char c = 'c'
+    word s = "hello", d = "cats face"
+
+    command start()[
+        outputNL test1
+        outputNL s
+        while(test1 < 5)[
+            if(true)[
+                test1 = 5
+            ]
+        ]
+        char a = 'a'
+        word string = "string"
+        boolean boolean = a = 'a' & (test1 < test2 & string = "pizza")
+        outputNL boolean
+        double q = 0
+
+        for(q = 0; q < 100; q = q + 25)[
+            outputNL q
+            if (q < 70)[
+                for(integer i = 0; i < 2; i = i + 1)[
+                    outputNL i
+                    if (q > 30)[
+                        if (q < 10)[
+                            outputNL q
+                        ]
+                        else if(q > 10)[
+                            q = q - 5
+                            break
+                        ]
+                    ]
+                ]
+            ]
+            outputNL q
+        ]
+        q = q + 5
+        outputNL q
+        double j = 125
+        q = j
+        outputNL j
+        outputNL q
+        j = j + 1
+        outputNL q
+    ]
+
+
+]

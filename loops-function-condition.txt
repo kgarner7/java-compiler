@@ -1,0 +1,35 @@
+program [
+    integer l = 1, y = 1, z = 1
+    double r = 1.0, s = 1.0
+
+    command start()[
+        integer a = 1
+        print(a, 1)
+        outputNL a
+        for (integer i = 0; i =< 3; i = i + 1)[
+            double j = 0.5
+            while (j < i)[
+                outputNL j
+                j = j + 1
+            ]
+            outputNL ""
+        ]
+    ]
+
+    command print(integer a, integer b) gives nothing[
+        a = a + 1
+        outputNL a
+        if (a => 0)[
+            print(a - 2, b)
+        ]
+        else if (b != 2)[
+            word output = "this may be an output"
+            outputNL output
+            print(a, 2)
+        ]
+        else [
+            word toOutput = "this is an output"
+            outputNL toOutput
+        ]
+    ]
+]

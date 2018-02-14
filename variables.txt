@@ -1,0 +1,34 @@
+program [
+    integer q = 0
+    command start()[
+        outputNL q
+        integer a = 4 + 3 * (1 - 4 / 2)
+        //example of math for integers
+
+        outputNL a
+
+        //integer math with variable the value truncated at 1
+        //non-variable output must be surrounded in parentheses
+        integer b = 3 / 2
+        outputNL (3 * b)
+
+        //example of floating-point with adding an integer
+        double c = 12 + a
+        outputNL c
+
+        //a "string". no string concatenation
+        word d = "hello"
+        outputNL d
+
+        //a character
+        char e = 'a'
+        outputNL e
+
+        //a boolean variable assigned with and (&) and or (|) operators
+        boolean f = (a + b < 2) | (a > 0 & b > 0)
+        outputNL !f
+
+        //type mismatch error. you can't add an integer and string together
+        double err = a + d
+    ]
+]
